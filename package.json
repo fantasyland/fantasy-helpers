@@ -1,0 +1,23 @@
+{
+    "name": "fantasy-helpers",
+    "description": "Helpers library for Fantasy Land",
+    "author": "Simon Richardson <stickupkid@gmail.com> (https://github.com/SimonRichardson)",
+    "homepage": "https://github.com/SimonRichardson/fantasy-helpers",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/SimonRichardson/fantasy-helpers.git"
+    },
+    "devDependencies": {
+        "grunt-cli": "0.1.9",
+        "grunt": "0.4.x",
+        "grunt-contrib-jshint": "0.6.x",
+        "grunt-contrib-nodeunit": "0.2.0"
+    },
+    "scripts": {
+        "test": "grunt"
+    },
+    "files": ["fantasy-helpers.js", "src/*.js"],
+    "main": "fantasy-helpers.js",
+    "version": "0.0.1"
+}
