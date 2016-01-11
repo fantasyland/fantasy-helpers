@@ -1,4 +1,4 @@
-var λ = require('../fantasy-helpers');
+const λ = require('../fantasy-helpers');
 
 exports.isTypeOf = {
     'when testing isTypeOf with valid values should return correct value': function(test) {
@@ -104,12 +104,12 @@ exports.isArray = {
 
 exports.isInstanceOf = {
     'when testing isInstanceOf with valid values should return correct value': function(test) {
-        var Point = function() {};
+        const Point = function() {};
         test.ok(λ.isInstanceOf(Point)(new Point()));
         test.done();
     },
     'when testing isInstanceOf with invalid values should return correct value': function(test) {
-        var Point = function() {};
+        const Point = function() {};
         test.notEqual(λ.isInstanceOf(Point)({}));
         test.notEqual(λ.isInstanceOf(Point)(function() {}));
         test.expect(2);

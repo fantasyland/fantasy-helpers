@@ -1,43 +1,41 @@
-var λ = require('../fantasy-helpers');
+const λ = require('../fantasy-helpers');
 
 exports.getInstance = {
     'when testing getInstance with function call should return correct instance': function(test) {
-        var Point = function(){
-            var a = λ.getInstance(this, Point);
-            return a;
+        const Point = function(){
+            return λ.getInstance(this, Point);
         };
-        var point = Point();
+        const point = Point();
         test.ok(λ.getInstance(point, Point) instanceof Point);
         test.done();
     },
     'when testing getInstance with new call should return correct instance': function(test) {
-        var Point = function(){
-            var a = λ.getInstance(this, Point);
-            return a;
+        const Point = function(){
+            return λ.getInstance(this, Point);
         };
-        var point = new Point();
+        const point = new Point();
         test.ok(λ.getInstance(point, Point) instanceof Point);
         test.done();
     },
     'when testing getInstance with function call with arguments should return correct instance': function(test) {
-        var Point = function(x){
-            var a = λ.getInstance(this, Point);
+        const Point = function(x){
+            const a = λ.getInstance(this, Point);
             a.x = x;
             return a;
         };
-        var random = Math.random();
-        var point = Point(random);
+        const random = Math.random();
+        const point = Point(random);
         test.ok(λ.getInstance(point, Point).x, random);
         test.done();
     },
     'when testing getInstance with new call with arguments should return correct instance': function(test) {
-        var Point = function(x){
-            var a = λ.getInstance(this, Point);
+        const Point = function(x){
+            const a = λ.getInstance(this, Point);
             a.x = x;
             return a;
         };
-        var random = Math.random();
-        var point = new Point(random);
+        const random = Math.random();
+        const point = new Point(random);
         test.ok(λ.getInstance(point, Point).x, random);
         test.done();
     }

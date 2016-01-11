@@ -1,4 +1,4 @@
-var λ = require('../fantasy-helpers');
+const λ = require('../fantasy-helpers');
 
 exports.strictEquals = {
     'when calling strictEquals with numbers should return correct value': function(test) {
@@ -10,7 +10,7 @@ exports.strictEquals = {
         test.done();
     },
     'when calling strictEquals with objects should return correct value': function(test) {
-        var obj = {};
+        const obj = {};
         test.ok(λ.strictEquals(obj)(obj));
         test.done();
     },

@@ -3,46 +3,42 @@
 //
 //  Returns `true` if `b` has `typeof a`.
 //
-var isTypeOf = function(a, b) {
-    return function(b) {
-        return typeof b === a;
-    };
-};
+const isTypeOf = (a, b) => (b) => typeof b === a;
 
 //
 //  ## isBoolean(a)
 //
 //  Returns `true` if `a` is a `Boolean`.
 //
-var isBoolean = isTypeOf('boolean');
+const isBoolean = isTypeOf('boolean');
 
 //
 //  ## isFunction(a)
 //
 //  Returns `true` if `a` is a `Function`.
 //
-var isFunction = isTypeOf('function');
+const isFunction = isTypeOf('function');
 
 //
 //  ## isNumber(a)
 //
 //  Returns `true` if `a` is a `Number`.
 //
-var isNumber = isTypeOf('number');
+const isNumber = isTypeOf('number');
 
 //
 //  ## isObject(a)
 //
 //  Returns `true` if `a` is a `Object`.
 //
-var isObject = isTypeOf('object');
+const isObject = isTypeOf('object');
 
 //
 //  ## isString(a)
 //
 //  Returns `true` if `a` is a `String`.
 //
-var isString = isTypeOf('string');
+const isString = isTypeOf('string');
 
 //
 //  ## isArray(a)
@@ -50,8 +46,9 @@ var isString = isTypeOf('string');
 //  Returns `true` if `a` is an `Array`.
 //
 function isArray(a) {
-    if(Array.isArray) return Array.isArray(a);
-    else return {}.toString.call(a) === "[object Array]";
+    return Array.isArray 
+        ? Array.isArray(a)
+        : {}.toString.call(a) === "[object Array]";
 }
 
 //
@@ -59,19 +56,6 @@ function isArray(a) {
 //
 //  Returns `true` if `a` is an instance of `b`.
 //
-var isInstanceOf = function(a) {
-    return function(b) {
-        return b instanceof a;
-    };
-};
+const isInstanceOf = (a) => (b) => b instanceof a;
 
-exports = module.exports = {
-    isTypeOf: isTypeOf,
-    isBoolean: isBoolean,
-    isFunction: isFunction,
-    isNumber: isNumber,
-    isObject: isObject,
-    isString: isString,
-    isArray: isArray,
-    isInstanceOf: isInstanceOf
-};
+exports = module.exports = { isTypeOf, isBoolean, isFunction, isNumber, isObject, isString, isArray, isInstanceOf };

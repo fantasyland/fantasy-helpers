@@ -1,4 +1,4 @@
-var λ = require('../fantasy-helpers');
+const λ = require('../fantasy-helpers');
 
 exports.extend = {
     'when testing extend with object should create a new object': function(test) {
@@ -6,9 +6,9 @@ exports.extend = {
         test.done();
     },
     'when testing extend with object should create a new object without modifying new object': function(test) {
-        var a = {a: 1},
-            b = {b: 2},
-            c = λ.extend(a, b);
+        const a = {a: 1};
+        const b = {b: 2};
+        const c = λ.extend(a, b);
 
         test.deepEqual(a, {a: 1});
         test.deepEqual(b, {b: 2});

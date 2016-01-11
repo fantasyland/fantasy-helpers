@@ -1,25 +1,22 @@
-var bind = require('./src/bind'),
-    create = require('./src/create'),
-    curry = require('./src/curry'),
-    strictEquals = require('./src/strict-equals'),
-    extend = require('./src/extend'),
-    functions = require('./src/functions'),
-    getInstance = require('./src/get-instance'),
-    is = require('./src/is'),
-    oneOf = require('./src/one-of'),
-    randomRange = require('./src/random-range'),
-    singleton = require('./src/singleton'),
+const bind = require('./src/bind');
+const curry = require('./src/curry');
+const strictEquals = require('./src/strict-equals');
+const extend = require('./src/extend');
+const functions = require('./src/functions');
+const getInstance = require('./src/get-instance');
+const is = require('./src/is');
+const oneOf = require('./src/one-of');
+const randomRange = require('./src/random-range');
+const singleton = require('./src/singleton');
 
-    helpers = {
-        bind: bind,
-        create: create,
-        curry: curry,
-        strictEquals: strictEquals,
-        extend: extend,
-        getInstance: getInstance,
-        oneOf: oneOf,
-        randomRange: randomRange,
-        singleton: singleton
-    };
+const helpers = { bind
+                , curry
+                , strictEquals
+                , extend
+                , getInstance
+                , oneOf
+                , randomRange
+                , singleton
+                };
 
 exports = module.exports = extend(helpers, extend(functions, is));

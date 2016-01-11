@@ -1,4 +1,4 @@
-var λ = require('../fantasy-helpers');
+const λ = require('../fantasy-helpers');
 
 exports.singleton = {
     'when testing singleton with string keys should return correct value': function(test) {

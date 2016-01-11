@@ -1,4 +1,5 @@
-var randomRange = require('./random-range');
+const randomRange = require('./random-range');
+
 //
 //  ## oneOf
 //

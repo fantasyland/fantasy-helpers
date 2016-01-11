@@ -1,17 +1,17 @@
-var λ = require('../fantasy-helpers'),
-    isAnyOf = function(a) {
-        return function(b) {
-            var i;
+const λ = require('../fantasy-helpers');
+const isAnyOf = (a) => {
+    return (b) => {
+        var i;
 
-            for(i = 0; i < a.length; i++) {
-                if(λ.strictEquals(a[i])(b)) {
-                    return true;
-                }
+        for(i = 0; i < a.length; i++) {
+            if(λ.strictEquals(a[i])(b)) {
+                return true;
             }
+        }
 
-            return false;
-        };
+        return false;
     };
+};
 
 exports.oneOf = {
     'when testing oneOf should return one of the values': function(test) {

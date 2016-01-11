@@ -1,5 +1,3 @@
-var create = require('./create');
-
 //
 //  ## getInstance(self, constructor)
 //
@@ -9,7 +7,7 @@ var create = require('./create');
 //  constructs an object with the correct prototype.
 //
 function getInstance(self, constructor) {
-    return self instanceof constructor ? self : create(constructor.prototype);
+    return self instanceof constructor ? self : Object.create(constructor.prototype);
 }
 
 exports = module.exports = getInstance;

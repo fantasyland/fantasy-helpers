@@ -1,7 +1,7 @@
-var λ = require('../fantasy-helpers'),
-    sumOfThree = λ.curry(function sumOfThree(a, b, c){
-        return a + b + c;
-    });
+const λ = require('../fantasy-helpers');
+const sumOfThree = λ.curry(function sumOfThree(a, b, c) {
+    return a + b + c;
+});
 
 exports.curry = {
     'when calling curry all at once should return correct value': function(test) {

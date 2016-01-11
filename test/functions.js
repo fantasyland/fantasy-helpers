@@ -1,4 +1,4 @@
-var λ = require('../fantasy-helpers');
+const λ = require('../fantasy-helpers');
 
 exports.functionName = {
     'when calling functionName with a named function should return correct name' : function(test) {
@@ -9,13 +9,13 @@ exports.functionName = {
         test.equals(λ.functionName(function (){}), '');
         test.done();
     },
-    'when calling functionName with a var named function should return correct name': function(test) {
-        var b = function a(){};
+    'when calling functionName with a const named function should return correct name': function(test) {
+        const b = function a(){};
         test.equals(λ.functionName(b), 'a');
         test.done();
     },
     'when calling functionName with a named function which is over written should return correct name': function(test) {
-        var b = function c(){};
+        const b = function c(){};
         b._name = 'a';
         test.equals(λ.functionName(b), 'a');
         test.done();
@@ -36,13 +36,13 @@ exports.functionLength = {
         test.done();
     },
     'when calling functionLength with over written parameters should return correct length': function(test) {
-        var b = function c(x, y, z){};
+        const b = function c(x, y, z){};
         b._length = 5;
         test.equals(λ.functionLength(b), 5);
         test.done();
     },
     'when calling functionLength with no parameters, but over written parameters should return correct length': function(test) {
-        var b = function c(){};
+        const b = function c(){};
         b._length = 5;
         test.equals(λ.functionLength(b), 5);
         test.done();

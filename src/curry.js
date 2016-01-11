@@ -1,8 +1,5 @@
-var bind = require('./bind'),
-    functions = require('./functions'),
-
-    functionLength = functions.functionLength,
-    functionName = functions.functionName;
+const bind = require('./bind');
+const {functionLength, functionName} = require('./functions');
 
 //
 //  ## curry(f)
@@ -23,11 +20,9 @@ var bind = require('./bind'),
 //       add(15, 27) == 42;
 //
 function curry(f) {
-    var a = function() {
-        var g = bind(f).apply(f, [this].concat([].slice.call(arguments)));
-
-        if(!functionLength(g)) return g();
-        else return curry(g);
+    const a = function() {
+        const g = bind(f).apply(f, [this].concat([].slice.call(arguments)));
+        return !functionLength(g) ? g() : curry(g);
     };
 
     /*

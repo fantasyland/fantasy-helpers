@@ -4,9 +4,7 @@
 //  Curried function for `===`.
 //
 function strictEquals(a) {
-    return function(b) {
-        return a === b;
-    };
+    return (b) => a === b;
 }
 
 exports = module.exports = strictEquals;

@@ -16,7 +16,4 @@ function functionName(f) {
     return f._name || f.name;
 }
 
-exports = module.exports = {
-    functionLength: functionLength,
-    functionName: functionName
-};
+exports = module.exports = { functionLength, functionName };
