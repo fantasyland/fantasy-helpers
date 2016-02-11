@@ -1,4 +1,6 @@
-const {functionLength, functionName} = require('./functions');
+'use strict';
+
+const { functionLength, functionName } = require('./functions');
 
 //
 //  ## bind(f)(o)
@@ -33,4 +35,4 @@ function bind(f) {
         : curriedBind;
 }
 
-exports = module.exports = bind;
+module.exports = bind;

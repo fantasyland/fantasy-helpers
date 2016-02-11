@@ -1,7 +1,9 @@
+'use strict';
+
 const λ = require('../fantasy-helpers');
 
 exports.getInstance = {
-    'when testing getInstance with function call should return correct instance': function(test) {
+    'when testing getInstance with function call should return correct instance': (test) => {
         const Point = function(){
             return λ.getInstance(this, Point);
         };
@@ -9,7 +11,7 @@ exports.getInstance = {
         test.ok(λ.getInstance(point, Point) instanceof Point);
         test.done();
     },
-    'when testing getInstance with new call should return correct instance': function(test) {
+    'when testing getInstance with new call should return correct instance': (test) => {
         const Point = function(){
             return λ.getInstance(this, Point);
         };
@@ -17,7 +19,7 @@ exports.getInstance = {
         test.ok(λ.getInstance(point, Point) instanceof Point);
         test.done();
     },
-    'when testing getInstance with function call with arguments should return correct instance': function(test) {
+    'when testing getInstance with function call with arguments should return correct instance': (test) => {
         const Point = function(x){
             const a = λ.getInstance(this, Point);
             a.x = x;
@@ -28,7 +30,7 @@ exports.getInstance = {
         test.ok(λ.getInstance(point, Point).x, random);
         test.done();
     },
-    'when testing getInstance with new call with arguments should return correct instance': function(test) {
+    'when testing getInstance with new call with arguments should return correct instance': (test) => {
         const Point = function(x){
             const a = λ.getInstance(this, Point);
             a.x = x;

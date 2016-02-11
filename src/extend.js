@@ -1,3 +1,5 @@
+'use strict';
+
 //
 //  ## extend(a, b)
 //
@@ -16,4 +18,4 @@ function extend(a, b) {
     return rec(rec({}, a), b);
 }
 
-exports = module.exports = extend;
+module.exports = extend;

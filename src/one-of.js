@@ -1,3 +1,5 @@
+'use strict';
+
 const randomRange = require('./random-range');
 
 //
@@ -9,4 +11,4 @@ function oneOf(a) {
     return a[Math.floor(this.randomRange(0, a.length))];
 }
 
-exports = module.exports = oneOf;
+module.exports = oneOf;

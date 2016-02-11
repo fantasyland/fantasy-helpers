@@ -1,3 +1,5 @@
+'use strict';
+
 //
 //  ## randomRange(a, b)
 //
@@ -7,4 +9,4 @@ function randomRange(a, b) {
     return Math.random() * (b - a) + a;
 }
 
-exports = module.exports = randomRange;
+module.exports = randomRange;

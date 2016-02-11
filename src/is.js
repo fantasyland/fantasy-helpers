@@ -1,9 +1,11 @@
+'use strict';
+
 //
 //  ## isTypeOf(a)(b)
 //
 //  Returns `true` if `b` has `typeof a`.
 //
-const isTypeOf = (a, b) => (b) => typeof b === a;
+const isTypeOf = a => b => typeof b === a;
 
 //
 //  ## isBoolean(a)
@@ -56,6 +58,14 @@ function isArray(a) {
 //
 //  Returns `true` if `a` is an instance of `b`.
 //
-const isInstanceOf = (a) => (b) => b instanceof a;
+const isInstanceOf = a => b => b instanceof a;
 
-exports = module.exports = { isTypeOf, isBoolean, isFunction, isNumber, isObject, isString, isArray, isInstanceOf };
+module.exports = { isTypeOf
+                 , isBoolean
+                 , isFunction
+                 , isNumber
+                 , isObject
+                 , isString
+                 , isArray
+                 , isInstanceOf 
+                 };

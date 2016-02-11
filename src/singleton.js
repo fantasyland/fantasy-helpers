@@ -1,3 +1,5 @@
+'use strict';
+
 //
 //  ## singleton(k, v)
 //
@@ -13,4 +15,4 @@ function singleton(k, v) {
     return o;
 }
 
-exports = module.exports = singleton;
+module.exports = singleton;

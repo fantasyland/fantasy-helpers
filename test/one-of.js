@@ -1,3 +1,5 @@
+'use strict';
+
 const λ = require('../fantasy-helpers');
 const isAnyOf = (a) => {
     return (b) => {
@@ -14,7 +16,7 @@ const isAnyOf = (a) => {
 };
 
 exports.oneOf = {
-    'when testing oneOf should return one of the values': function(test) {
+    'when testing oneOf should return one of the values': (test) => {
         var a = ['boolean', 'number', 'string'];
         test.ok(isAnyOf(a)(λ.oneOf(a)));
         test.done();

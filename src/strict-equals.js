@@ -1,10 +1,12 @@
+'use strict';
+
 //
 //  ## strictEquals(a)(b)
 //
 //  Curried function for `===`.
 //
 function strictEquals(a) {
-    return (b) => a === b;
+    return b => a === b;
 }
 
-exports = module.exports = strictEquals;
+module.exports = strictEquals;

@@ -1,5 +1,7 @@
+'use strict';
+
 const bind = require('./bind');
-const {functionLength, functionName} = require('./functions');
+const { functionLength, functionName } = require('./functions');
 
 //
 //  ## curry(f)
@@ -35,4 +37,4 @@ function curry(f) {
     return a;
 }
 
-exports = module.exports = curry;
+module.exports = curry;

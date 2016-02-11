@@ -1,3 +1,5 @@
+'use strict';
+
 //
 //  ## getInstance(self, constructor)
 //
@@ -10,4 +12,4 @@ function getInstance(self, constructor) {
     return self instanceof constructor ? self : Object.create(constructor.prototype);
 }
 
-exports = module.exports = getInstance;
+module.exports = getInstance;

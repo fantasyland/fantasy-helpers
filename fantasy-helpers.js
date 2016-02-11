@@ -4,6 +4,7 @@ const strictEquals = require('./src/strict-equals');
 const extend = require('./src/extend');
 const functions = require('./src/functions');
 const getInstance = require('./src/get-instance');
+const has = require('./src/has');
 const is = require('./src/is');
 const oneOf = require('./src/one-of');
 const randomRange = require('./src/random-range');
@@ -19,4 +20,4 @@ const helpers = { bind
                 , singleton
                 };
 
-exports = module.exports = extend(helpers, extend(functions, is));
+module.exports = extend(helpers, extend(extend(functions, is), has));

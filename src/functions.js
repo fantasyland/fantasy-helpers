@@ -1,3 +1,5 @@
+'use strict';
+
 //
 //  ## functionLength(f)
 //
@@ -16,4 +18,6 @@ function functionName(f) {
     return f._name || f.name;
 }
 
-exports = module.exports = { functionLength, functionName };
+module.exports = { functionLength
+                 , functionName
+                 };
